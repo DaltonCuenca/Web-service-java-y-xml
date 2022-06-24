@@ -9,8 +9,8 @@ Pasamos un numero de cedula al web service y se realiza la consulta,
 retorna cedula, nombre y apellido.
 con esos datos en java generamos el xml.
 ## Base de datos Postgresql
-#### Base:Personas
-#### tabla:personas
-#### campos:cedula, nombre y apellido
+#### Base: Personas
+#### Tabla: personas
+#### Campos: cedula, nombre y apellido
 ## Archivos xml
 Los Archivos XML se guardan en la carpeta del proyecto
