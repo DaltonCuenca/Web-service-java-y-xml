@@ -6,3 +6,5 @@ El web service se encarga de extraer los datos y guardarlos en postgresql
 Pasamos un numero de cedula al web service y se realiza la consulta,
 retorna cedula, nombre y apellido.
 con esos datos en java generamos el xml.
+## Archivos xml
+Los Archivos XML se guardan en la carpeta del proyecto
