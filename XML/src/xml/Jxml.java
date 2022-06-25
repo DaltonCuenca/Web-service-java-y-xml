@@ -191,6 +191,7 @@ public class Jxml extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        retornoXML="";
         // Creando una variable llamada entrada que es de tipo Scanner.
         Scanner entrada = null;
        // Crear un objeto selector de archivos y luego abrirlo.
