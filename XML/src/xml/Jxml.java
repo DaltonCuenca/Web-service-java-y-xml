@@ -182,6 +182,7 @@ public class Jxml extends javax.swing.JFrame {
         cedulas = txt_cedula.getText();
         nombres = txt_nombre.getText();
         apellidos = txt_apellido.getText();
+
         //Seguarda el numero de cedula para el nombre del archivo
         this.documento = cedulas + ".xml";
 
@@ -372,6 +373,7 @@ public class Jxml extends javax.swing.JFrame {
             // Generamos el archivo xml con los datos anteriores
             // Se guarda en la carpeta del proyecto
             Source source = new DOMSource(document);
+            // En la variable documento esta guardado el numero de cedula con la extencion xml
             Result result = new StreamResult(new File(documento));
             
             Transformer transformer = TransformerFactory.newInstance().newTransformer();
