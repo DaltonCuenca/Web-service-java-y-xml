@@ -17,6 +17,7 @@ public class XML {
     public static void main(String[] args) {
         // TODO code application logic here
         Jxml xml=new Jxml();
+        controlador ctrl=new controlador(xml);
         xml.setVisible(true);
     }
     

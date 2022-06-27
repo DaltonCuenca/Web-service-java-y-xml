@@ -67,34 +67,14 @@ public class Jxml extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         btn_generar.setText("GENERAR");
-        btn_generar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_generarActionPerformed(evt);
-            }
-        });
 
         btn_abrir.setText("ABRIR");
-        btn_abrir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_abrirActionPerformed(evt);
-            }
-        });
 
         btn_subir.setText("SUBIR");
-        btn_subir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_subirActionPerformed(evt);
-            }
-        });
 
         jLabel1.setText("REGISTRAR CLIENTES");
 
         btn_consulta.setText("Consultar");
-        btn_consulta.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_consultaActionPerformed(evt);
-            }
-        });
 
         jLabel2.setText("Cedula:");
 
@@ -108,30 +88,29 @@ public class Jxml extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(169, 169, 169)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btn_subir)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txt_enlace)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel2)
-                                        .addComponent(jLabel3)
-                                        .addComponent(jLabel4))
-                                    .addGap(65, 65, 65)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(txt_cedula)
-                                        .addComponent(txt_nombre)
-                                        .addComponent(txt_apellido, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txt_enlace)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel4))
+                                .addGap(65, 65, 65)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txt_cedula)
+                                    .addComponent(txt_nombre)
+                                    .addComponent(txt_apellido, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(25, 25, 25)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btn_generar)
-                            .addComponent(btn_abrir)
-                            .addComponent(btn_consulta)))
+                            .addComponent(btn_consulta)
+                            .addComponent(btn_abrir, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(158, 158, 158)
-                        .addComponent(jLabel1)))
+                        .addComponent(jLabel1))
+                    .addComponent(btn_subir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btn_generar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(205, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -147,19 +126,20 @@ public class Jxml extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(txt_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_generar))
+                    .addComponent(txt_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(txt_apellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btn_generar)
+                .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txt_enlace, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn_abrir))
-                .addGap(35, 35, 35)
+                .addGap(32, 32, 32)
                 .addComponent(btn_subir)
-                .addContainerGap(112, Short.MAX_VALUE))
+                .addContainerGap(87, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -175,76 +155,6 @@ public class Jxml extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btn_generarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_generarActionPerformed
-        // TODO add your handling code here:
-        String nombres, apellidos;
-        cedulas = txt_cedula.getText();
-        nombres = txt_nombre.getText();
-        apellidos = txt_apellido.getText();
-
-        //Seguarda el numero de cedula para el nombre del archivo
-        this.documento = cedulas + ".xml";
-
-        //crear xml
-        generarXML(cedulas, nombres, apellidos);
-    }//GEN-LAST:event_btn_generarActionPerformed
-
-    private void btn_abrirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_abrirActionPerformed
-        // TODO add your handling code here:
-        retornoXML="";
-        // Creando una variable llamada entrada que es de tipo Scanner.
-        Scanner entrada = null;
-       // Crear un objeto selector de archivos y luego abrirlo.
-        JFileChooser fileChooser = new JFileChooser();
-        fileChooser.showOpenDialog(fileChooser);
-        try {
-            // Crear un objeto de archivo con la ruta del archivo que el usuario seleccionó.
-            String path = fileChooser.getSelectedFile().getAbsolutePath();
-            File f = new File(path);
-            // Leer el archivo y almacenarlo en una cadena.
-            entrada = new Scanner(f);
-            while (entrada.hasNext()) {
-                retornoXML += entrada.nextLine();
-            }
-            // Establecer el texto del campo de texto en la ruta del archivo.
-            txt_enlace.setText(path);
-            // Imprimiendo la cadena XML.
-            System.out.println(retornoXML);
-        } catch (FileNotFoundException e) {
-            System.out.println(e.getMessage());
-        } catch (NullPointerException e) {
-            System.out.println("No se ha seleccionado ningún fichero");
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        } finally {
-            if (entrada != null) {
-            // Cerrando el objeto Escáner.
-                entrada.close();
-            }
-        }
-    }//GEN-LAST:event_btn_abrirActionPerformed
-
-    private void btn_subirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_subirActionPerformed
-       // Mostrando un mensaje de diálogo con el resultado del método insertar.
-        JOptionPane.showMessageDialog(null, insertar(retornoXML));
-    }//GEN-LAST:event_btn_subirActionPerformed
-
-    private void btn_consultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_consultaActionPerformed
-        // TODO add your handling code here: 
-        List datos;
-        datos=consulta(txt_cedula.getText());
-        for (int i = 0; i < datos.size(); i++) {
-            System.out.println(datos.get(i).toString());
-        }
-
-        // Obtener el primer elemento de la matriz y convertirlo en una cadena
-        //para usarlo como el nombre del archivo xml
-        this.documento = datos.get(0).toString() + ".xml";
-
-        // Generamos xml
-        generarXML(datos.get(0).toString(), datos.get(1).toString(), datos.get(2).toString());
-    }//GEN-LAST:event_btn_consultaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -282,19 +192,19 @@ public class Jxml extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_abrir;
-    private javax.swing.JButton btn_consulta;
-    private javax.swing.JButton btn_generar;
-    private javax.swing.JButton btn_subir;
+    public javax.swing.JButton btn_abrir;
+    public javax.swing.JButton btn_consulta;
+    public javax.swing.JButton btn_generar;
+    public javax.swing.JButton btn_subir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField txt_apellido;
-    private javax.swing.JTextField txt_cedula;
-    private javax.swing.JTextField txt_enlace;
-    private javax.swing.JTextField txt_nombre;
+    public javax.swing.JTextField txt_apellido;
+    public javax.swing.JTextField txt_cedula;
+    public javax.swing.JTextField txt_enlace;
+    public javax.swing.JTextField txt_nombre;
     // End of variables declaration//GEN-END:variables
 
     private void generarXML(String cedulas, String nombres, String apellidos) {
