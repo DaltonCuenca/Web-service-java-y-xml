@@ -51,11 +51,11 @@ public class Jxml extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        btn_generar = new javax.swing.JButton();
+        btn_abrir = new javax.swing.JButton();
+        btn_subir = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
+        btn_consulta = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -66,33 +66,33 @@ public class Jxml extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("GENERAR");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btn_generar.setText("GENERAR");
+        btn_generar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btn_generarActionPerformed(evt);
             }
         });
 
-        jButton2.setText("ABRIR");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btn_abrir.setText("ABRIR");
+        btn_abrir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btn_abrirActionPerformed(evt);
             }
         });
 
-        jButton3.setText("SUBIR");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btn_subir.setText("SUBIR");
+        btn_subir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btn_subirActionPerformed(evt);
             }
         });
 
         jLabel1.setText("REGISTRAR CLIENTES");
 
-        jButton4.setText("Consultar");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        btn_consulta.setText("Consultar");
+        btn_consulta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                btn_consultaActionPerformed(evt);
             }
         });
 
@@ -111,7 +111,7 @@ public class Jxml extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton3)
+                            .addComponent(btn_subir)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(txt_enlace)
                                 .addGroup(jPanel1Layout.createSequentialGroup()
@@ -126,9 +126,9 @@ public class Jxml extends javax.swing.JFrame {
                                         .addComponent(txt_apellido, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addGap(25, 25, 25)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton1)
-                            .addComponent(jButton2)
-                            .addComponent(jButton4)))
+                            .addComponent(btn_generar)
+                            .addComponent(btn_abrir)
+                            .addComponent(btn_consulta)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(158, 158, 158)
                         .addComponent(jLabel1)))
@@ -143,12 +143,12 @@ public class Jxml extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(txt_cedula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4))
+                    .addComponent(btn_consulta))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(txt_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
+                    .addComponent(btn_generar))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
@@ -156,9 +156,9 @@ public class Jxml extends javax.swing.JFrame {
                 .addGap(35, 35, 35)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txt_enlace, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2))
+                    .addComponent(btn_abrir))
                 .addGap(35, 35, 35)
-                .addComponent(jButton3)
+                .addComponent(btn_subir)
                 .addContainerGap(112, Short.MAX_VALUE))
         );
 
@@ -176,7 +176,7 @@ public class Jxml extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btn_generarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_generarActionPerformed
         // TODO add your handling code here:
         String nombres, apellidos;
         cedulas = txt_cedula.getText();
@@ -188,9 +188,9 @@ public class Jxml extends javax.swing.JFrame {
 
         //crear xml
         generarXML(cedulas, nombres, apellidos);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btn_generarActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btn_abrirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_abrirActionPerformed
         // TODO add your handling code here:
         retornoXML="";
         // Creando una variable llamada entrada que es de tipo Scanner.
@@ -223,14 +223,14 @@ public class Jxml extends javax.swing.JFrame {
                 entrada.close();
             }
         }
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btn_abrirActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btn_subirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_subirActionPerformed
        // Mostrando un mensaje de diálogo con el resultado del método insertar.
         JOptionPane.showMessageDialog(null, insertar(retornoXML));
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_btn_subirActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void btn_consultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_consultaActionPerformed
         // TODO add your handling code here: 
         List datos;
         datos=consulta(txt_cedula.getText());
@@ -244,7 +244,7 @@ public class Jxml extends javax.swing.JFrame {
 
         // Generamos xml
         generarXML(datos.get(0).toString(), datos.get(1).toString(), datos.get(2).toString());
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_btn_consultaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -282,10 +282,10 @@ public class Jxml extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton btn_abrir;
+    private javax.swing.JButton btn_consulta;
+    private javax.swing.JButton btn_generar;
+    private javax.swing.JButton btn_subir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
