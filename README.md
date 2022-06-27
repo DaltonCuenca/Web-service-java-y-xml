@@ -1,5 +1,5 @@
 # Web-service-java-y-xml
-Se uso GlassFish
+Se uso GlassFish. Revisar el codigo en controlador.java
 ## Detalles
 ### Generar, cargar y subir datos de un xml
 Se genera un xml desde java y lo cargamos para subirlo al web service.
